@@ -29,3 +29,21 @@ from myapp import mymodel
 - сначала попробовать запустить тесты обычным образом. с первого раза все должно упасть
 - если после падения в папке tests создались алембиковские файлы, то нужно прописать туда данные по миграхам
 - если они не создались, то зайти из консоли в папку test и вызвать вручную команды на миграции, чтобы файлы появились
+
+
+# Check
+    - Endpoints - Done
+    - Tests - Done
+    - CI: testing+linting - Done
+    - Auth - 
+    - Logging - 
+    - ADMIN + Role based control - 
+    - CD: deploy - 
+    - Monitoring: Sentry - 
+    - Grafana + Prometheus - 
+    - Docker - 
+    
+    - RabbitMQ - ???
+    - Kafka - ???
+    - Kubernetes - ???
+    - Patterns/Refactoring - ???
