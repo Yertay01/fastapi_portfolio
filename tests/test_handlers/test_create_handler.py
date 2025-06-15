@@ -8,6 +8,7 @@ async def test_create_user(client, get_user_from_database):
         "name": "Alisher",
         "surname": "Yertayev",
         "email": "alisherertaev@gmail.com",
+        "password": "password",
     }
 
     resp = client.post("/user", data=json.dumps(user_data))
@@ -31,12 +32,14 @@ async def test_create_user_duplicate_email_error(client, get_user_from_database)
         "name": "Alisher",
         "surname": "Yertayev",
         "email": "alisherertaev@gmail.com",
+        "password": "password",
     }
 
     user_data_same_email = {
         "name": "Alexandr",
         "surname": "Lee",
         "email": "alisherertaev@gmail.com",
+        "password": "password",
     }
     resp = client.post("/user/", data=json.dumps(user_data))
     data_from_resp = resp.json()
