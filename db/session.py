@@ -3,8 +3,7 @@ from typing import Generator
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import sessionmaker
-from contextlib import asynccontextmanager
-
+ 
 import settings
 
 # create async engine for interaction with database
