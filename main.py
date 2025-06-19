@@ -1,13 +1,25 @@
+import sentry_sdk
 import uvicorn
 from fastapi import FastAPI
 from fastapi.routing import APIRouter
+from starlette_exporter import handle_metrics
+from starlette_exporter import PrometheusMiddleware
 
 import settings
 from api.handlers import user_router
 from api.login_handler import login_router
 
+sentry_sdk.init(
+    dsn=settings.SENTRY_URL,
+    # Add data like request headers and IP for users,
+    # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
+    send_default_pii=True,
+)
+
 # create instance of the app
 app = FastAPI(title="FastAPI project")
+app.add_middleware(PrometheusMiddleware)
+app.add_route("/metrics", handle_metrics)
 
 # create the instance for the routes
 main_api_router = APIRouter()

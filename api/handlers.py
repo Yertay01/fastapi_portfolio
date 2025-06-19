@@ -1,9 +1,9 @@
 from logging import getLogger
+from uuid import UUID
 
 from fastapi import APIRouter
 from fastapi import Depends
 from fastapi import HTTPException
-from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
