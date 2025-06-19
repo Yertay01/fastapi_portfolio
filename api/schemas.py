@@ -8,7 +8,7 @@ from pydantic import constr
 from pydantic import EmailStr
 from pydantic import validator
 
-LETTER_MATCH_PATTERN = re.compile(r"[а-яА-Яа-zA-Z\-]+$")
+LETTER_MATCH_PATTERN = re.compile(r"^[а-яА-Яa-zA-Z\-]+$")
 
 
 class TunedModel(BaseModel):
