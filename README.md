@@ -35,14 +35,14 @@ from myapp import mymodel
     - Endpoints - Done
     - Tests - Done
     - CI: testing+linting - Done
-    - Auth - 
-    - Logging - 
-    - ADMIN + Role based control - 
-    - CD: deploy - 
-    - Monitoring: Sentry - 
-    - Grafana + Prometheus - 
-    - Docker - 
-    
+    - Auth - Done
+    - Logging -
+    - ADMIN + Role based control - Done
+    - CD: deploy -
+    - Monitoring: Sentry - Done
+    - Grafana + Prometheus - Done
+    - Docker - Done
+
     - RabbitMQ - ???
     - Kafka - ???
     - Kubernetes - ???
